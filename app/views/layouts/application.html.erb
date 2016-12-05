@@ -50,14 +50,19 @@
               <h1>Blogz</h1>
               <hr class="small">
               <span class="subheading">A Simple &amp; Clean Blog app for all publishers.</span>
+              <hr class="small">
+              <button class="btn btn-default"><%=	link_to "Create Post", new_post_path %></button>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-
     <div class="container">
+      <!--<%=	flash.each do |name, msg| %>-->
+        <!--<%=	content_tag(:div, msg, class: "alert") %>-->
+      <!--<% end %>-->
+
       <%= yield %>
     </div>
 
