@@ -24,7 +24,7 @@
             <span class="sr-only">Toggle navigation</span>
             Menu <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="/">Blogz</a>
+          <a class="navbar-br`and" href="/">Blogz</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,9 +59,13 @@
     </header>
 
     <div class="container">
-      <!--<%=	flash.each do |name, msg| %>-->
-        <!--<%=	content_tag(:div, msg, class: "alert") %>-->
-      <!--<% end %>-->
+      <% if flash[:notice] %>
+          <div class="alert alert-dismissible alert-success"><%= flash[:notice] %></div>
+      <% end %>
+
+      <% if flash[:alert] %>
+          <div class="alert alert-dismissible alert-warning"><%= flash[:alert] %></div>
+      <% end %>
 
       <%= yield %>
     </div>
