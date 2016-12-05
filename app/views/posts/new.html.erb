@@ -1,6 +1,17 @@
-<h1>Make Something</h1>
+<h1>Publish Something</h1>
 
-<%=	form_for :posts, url: posts_path do |f| %>
+<%=	form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+        <div class="alert alert-danger">
+          <h3><%=	pluralize(@post.errors.count, "error") %> stopped from publishing.</h3>
+          <ul>
+            <%=	@post.errors.full_messages.each do |msg| %>
+              <li><%=	msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
     <p>
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -11,7 +22,5 @@
       <%= f.text_area :body %>
     </p>
 
-    <p>
-      <%= f.submit %>
-    </p>
+    <button class="btn btn-default"><%= f.submit %></button>
 <% end %>
