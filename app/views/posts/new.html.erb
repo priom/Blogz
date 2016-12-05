@@ -1,26 +1,21 @@
-<h1>Publish Something</h1>
+<h1><center>Publish Something</center></h1>
 
-<%=	form_for :post, url: posts_path do |f| %>
+<%=	simple_form_for @post do |f| %>
     <% if @post.errors.any? %>
         <div class="alert alert-danger">
-          <h3><%=	pluralize(@post.errors.count, "error") %> stopped from publishing.</h3>
+          <h3><%=   pluralize(@post.errors.count, "error") %> stopped from publishing.</h3>
           <ul>
-            <%=	@post.errors.full_messages.each do |msg| %>
-              <li><%=	msg %></li>
+            <%= @post.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
             <% end %>
           </ul>
         </div>
     <% end %>
 
-    <p>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </p>
+  <%=	f.input :title %>
+  <%=	f.input :body, label: "Content", :input_html => { 'rows' => 20} %>
 
-    <p>
-      <%= f.label :body %>
-      <%= f.text_area :body %>
-    </p>
-
-    <button class="btn btn-default"><%= f.submit %></button>
+  <div class="col-md-2 col-md-offset-5">
+      <%=	f.button :submit, class: "btn btn-default" %>
+  </div>
 <% end %>
