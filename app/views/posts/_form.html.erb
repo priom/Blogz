@@ -1,7 +1,7 @@
 <%=	simple_form_for @post do |f| %>
     <% if @post.errors.any? %>
         <div class="alert alert-danger">
-          <h3><%=   pluralize(@post.errors.count, "error") %> stopped from publishing.</h3>
+          <h3><%= pluralize(@post.errors.count, "error") %> stopped from publishing.</h3>
           <ul>
             <%= @post.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
