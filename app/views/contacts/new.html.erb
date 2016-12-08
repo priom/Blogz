@@ -1,0 +1,17 @@
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+
+  <%=	simple_form_for @contact do |f| %>
+      <%=	f.input :name, placeholder: "Please enter your name here." %>
+      <%= f.input :email, required: true, placeholder: "Please enter your email here." %>
+      <%= f.input :message, required: true, as: :text, placeholder: "Please enter your message here." %>
+
+      <div class="hidden">
+        <%=	f.input :nickname, hint: 'leave this field blank' %>
+      </div>
+
+      <div class="col-md-4 col-md-offset-4">
+        <%=	f.button :submit, 'Send', class: "btn btn-default btn-block" %>
+      </div>
+<% end %>
+</div>

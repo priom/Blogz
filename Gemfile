@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'devise', '~> 4.2'
 gem 'devise-bootstrap-views', '~> 0.0.9'
+gem 'mail_form', '~> 1.6'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
