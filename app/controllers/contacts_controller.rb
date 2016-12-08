@@ -9,7 +9,6 @@ class ContactsController < ApplicationController
 
     if @contact.deliver
       flash.now[:error] = nil
-      flash.now[:alert] = 'Message sent successfully!'
     else
       flash.now[:error] = 'Cannot send message'
       render :new
