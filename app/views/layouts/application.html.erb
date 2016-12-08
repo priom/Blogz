@@ -17,7 +17,8 @@
   </head>
 
   <body>
-    <%=	render 'layouts/nav' %>
+    <%=	render 'layouts/navbar' %>
+    <%=	render 'layouts/header' %>
 
     <div class="container">
       <% if flash[:notice] %>
@@ -27,9 +28,9 @@
       <% if flash[:alert] %>
           <div class="alert alert-dismissible alert-warning"><%= flash[:alert] %></div>
       <% end %>
-    </div>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <%=	render 'layouts/footer' %>
   </body>
