@@ -1,6 +1,6 @@
 # Blogz
 
-[![Build Status](https://semaphoreci.com/api/v1/c0der0/blogz/branches/master/badge.svg)](https://semaphoreci.com/c0der0/blogz)  
+[![Build Status](https://semaphoreci.com/api/v1/c0der0/blogz/branches/master/shields_badge.svg)](https://semaphoreci.com/c0der0/blogz)
 
 * Ruby version
 
