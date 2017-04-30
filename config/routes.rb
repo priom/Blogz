@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  # devise_for :users
+
+  devise_for :users, :path => '', :path_names => {:sign_in => 'signin', :sign_out => 'signout', :sign_up => 'signup', :edit => 'edit'}
+
   resources :posts do
     resources :comments
   end
+
+  resources :contacts, only: [:new, :create]
 
   root "posts#index"
 
