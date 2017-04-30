@@ -1,9 +1,6 @@
-# README
+# Blogz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+[![Build Status](https://semaphoreci.com/api/v1/c0der0/blogz/branches/master/shields_badge.svg)](https://semaphoreci.com/c0der0/blogz)
 
 * Ruby version
 
